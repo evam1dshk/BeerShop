@@ -8,5 +8,7 @@ namespace BeerShop.Data.Entities
 
         [Required]
         public string Name { get; set; }
+
+        public ICollection<Beer> Beers { get; set; }
     }
 }

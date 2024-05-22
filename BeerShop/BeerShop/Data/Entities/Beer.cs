@@ -11,25 +11,25 @@ namespace BeerShop.Data.Entities
         public int Id { get; set; }
 
         [Required]
-        public string BeerName { get; set; }
+        public string BeerName { get; set; } = null!;
 
         [Required]
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = null!;
 
         [Required]
-        public string Description { get; set; }
+        public string Description { get; set; } = null!;
 
         [Required]
-        public string BeerGlass { get; set; }
+        public string BeerGlass { get; set; } = null!;
 
         [Required]
-        public string Producer { get; set; }
+        public string Producer { get; set; } = null!;
 
         [Required]
         public string CriticScore { get; set; }
 
         [Required]
-        public string AlcoholBV { get; set; }
+        public string AlcoholBV { get; set; } = 
 
         [Required]
         public string TestingNotes { get; set; }
@@ -41,8 +41,5 @@ namespace BeerShop.Data.Entities
         public int BeerTypeId { get; set; }
 
         public BeerType BeerType { get; set; }
-
-        public Guid AgentId { get; set; }
-        public Agent Agent { get; init; } = null!;
     }
 }
