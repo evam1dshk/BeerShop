@@ -7,8 +7,8 @@ namespace BeerShop.Data.Entities
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
-        public ICollection<Beer> Beers { get; set; }
+        public ICollection<Beer> Beers { get; set; } = null!;
     }
 }

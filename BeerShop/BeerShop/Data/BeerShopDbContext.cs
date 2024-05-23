@@ -1,6 +1,7 @@
 ﻿using BeerShop.Data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace BeerShop.Data
 {
@@ -11,9 +12,16 @@ namespace BeerShop.Data
         {
 
         }
-        public DbSet<Beer> Beers { get; set; }
-        public DbSet<BeerType> BeerTypes { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Beer> Beers { get; set; } = null!; 
+        public DbSet<BeerType> BeerTypes { get; set; } = null!;
+        public DbSet<Customer> Customers { get; set; } = null!;
+        public DbSet<Cart> Carts { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+
+            base.OnModelCreating(builder);
+
+        }
     }
 }

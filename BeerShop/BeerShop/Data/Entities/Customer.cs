@@ -4,6 +4,6 @@ namespace BeerShop.Data.Entities
 {
     public class Customer : IdentityUser
     {
-        public ICollection<Cart> Cart { get; set; }
+        public ICollection<Cart> Carts { get; set; } = new List<Cart>();
     }
 }
